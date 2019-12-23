@@ -1,0 +1,2 @@
+class AmenityProperty < ApplicationRecord
+end
