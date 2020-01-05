@@ -9,10 +9,10 @@ class Api::PropertiesController < ApplicationController
 
   def create
     @property = Property.new(
+      address: params[:address],
       property_url: params[:property_url],
       notes: params[:notes],
-      address: params[:address],
-      visited: false,
+      visited: params[:false],
       rating: params[:rating],
       availability: params[:availability],
       user_id: current_user.id,

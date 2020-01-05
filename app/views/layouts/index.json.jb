@@ -1,0 +1,9 @@
+@properties.map do |property|
+  {
+    address: property.address,
+    url: property.property_url,
+    notes: property.notes,
+    rating: property.rating,
+
+  }
+end

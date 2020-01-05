@@ -1,0 +1,8 @@
+{
+  address: @property.address,
+  url: @property.url,
+  notes: @property.notes,
+  visited: @property.visited,
+  rating: property.rating,
+  availability: property.availabity,
+}
