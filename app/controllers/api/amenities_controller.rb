@@ -1,6 +1,6 @@
 class Api::AmenitiesController < ApplicationController
   def index
-    @amenity = Amenity.all
+    @amenities = Amenity.all
     render "index.json.jb"
   end
 

@@ -27,7 +27,7 @@ class Api::PropertiesController < ApplicationController
 
   def update
     @property = Property.findby(id: params[:id])
-    @property.rating = params[:notes] || @property.rating
+    @property.rating = params[:rating] || @property.rating
     @property.notes = params[:notes] || @property.notes
     @property.photos = params[:photos] || @property.photos
     @property.save

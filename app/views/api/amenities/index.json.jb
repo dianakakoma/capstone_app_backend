@@ -1,3 +1,6 @@
-amenities.map do |amenity|
-  { description: amenity.description }
+@amenities.map do |amenity|
+  {
+    id: amenity.id,
+    description: amenity.description,
+  }
 end
