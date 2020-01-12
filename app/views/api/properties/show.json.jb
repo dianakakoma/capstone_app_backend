@@ -3,7 +3,7 @@
   url: @property.url,
   notes: @property.notes,
   visited: @property.visited,
-  rating: property.rating,
-  availability: property.availabity,
-  created_at: property.created_at,
+  rating: @property.rating,
+  available: @property.available,
+  created_at: @property.created_at,
 }

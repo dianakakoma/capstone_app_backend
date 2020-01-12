@@ -7,5 +7,10 @@ Rails.application.routes.draw do
     post "/properties" => "properties#create"
     get "/properties/:id" => "properties#show"
     patch "/properties/:id" => "properties#update"
+
+    get "/amenities" => "amenities#index"
+    post "/amenities" => "amenities#create"
+    get "/amenities" => "amenities#show"
+    patch "/amenities" => "amenities#update"
   end
 end

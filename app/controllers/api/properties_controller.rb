@@ -2,7 +2,6 @@ class Api::PropertiesController < ApplicationController
   before_action :authenticate_user #, except: [:index, :show]
 
   def index
-    # @properties = Property.all
     @properties = current_user.properties
     render "index.json.jb"
   end
@@ -10,11 +9,11 @@ class Api::PropertiesController < ApplicationController
   def create
     @property = Property.new(
       address: params[:address],
-      property_url: params[:property_url],
+      url: params[:url],
       notes: params[:notes],
-      visited: params[:false],
+      visited: false,
       rating: params[:rating],
-      availability: params[:availability],
+      available: params[:available],
       user_id: current_user.id,
     )
     @property.save
