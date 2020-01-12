@@ -4,7 +4,6 @@ class CreateImages < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.integer :property_id
       t.string :url
-
       t.timestamps
     end
   end

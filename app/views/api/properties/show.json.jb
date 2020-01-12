@@ -5,4 +5,5 @@
   visited: @property.visited,
   rating: property.rating,
   availability: property.availabity,
+  created_at: property.created_at,
 }
