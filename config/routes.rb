@@ -10,7 +10,12 @@ Rails.application.routes.draw do
 
     get "/amenities" => "amenities#index"
     post "/amenities" => "amenities#create"
-    get "/amenities" => "amenities#show"
-    patch "/amenities" => "amenities#update"
+    get "/amenities/:id" => "amenities#show"
+    patch "/amenities/:id" => "amenities#update"
+
+    get "/images" => "images#index"
+    post "/images" => "images#create"
+    get "/images/:id" => "images#show"
+    patch "/images/:id" => "images#patch"
   end
 end
