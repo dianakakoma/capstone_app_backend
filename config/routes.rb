@@ -13,8 +13,8 @@ Rails.application.routes.draw do
     get "/amenities/:id" => "amenities#show"
     patch "/amenities/:id" => "amenities#update"
 
-    post "amenity_users" => "amenity_users#create"
-    delete "amenity_users" => "amenity_users#destroy"
+    post "/amenity_users" => "amenity_users#create"
+    delete "/amenity_users/:id" => "amenity_users#destroy"
 
     get "/images" => "images#index"
     post "/images" => "images#create"

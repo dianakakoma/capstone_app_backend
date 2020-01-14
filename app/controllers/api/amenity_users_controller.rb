@@ -1,8 +1,7 @@
 class Api::AmenityUsersController < ApplicationController
   def create
-    @amenity_user = Amenity_users.new(
-      property_id: params[:property_id],
-      user_id: params[:user_id],
+    @amenity_user = AmenityUser.new(
+      user_id: current_user.id,
       amenity_id: params[:amenity_id],
     )
     @amenity_user.save
@@ -10,8 +9,8 @@ class Api::AmenityUsersController < ApplicationController
   end
 
   def destroy
-    @amenity_users = Amenity_users.find_by(id: params[:id])
-    @amenity_users.destroy
+    @amenity_user = AmenityUser.find_by(id: params[:id])
+    @amenity_user.destroy
     render json: { Message: "One amenity has been successfully removed!" }
   end
 end
