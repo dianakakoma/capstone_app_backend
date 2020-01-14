@@ -4,5 +4,6 @@
     url: property.url,
     notes: property.notes,
     rating: property.rating,
+    images: property.images,
   }
 end
