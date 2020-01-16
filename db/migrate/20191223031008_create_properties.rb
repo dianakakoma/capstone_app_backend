@@ -8,6 +8,7 @@ class CreateProperties < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.boolean :visited
       t.boolean :available
+      t.integer :rent
 
       t.timestamps
     end

@@ -1,5 +1,5 @@
 {
-  rent: property.rent,
+  rent: @property.rent,
   address: @property.address,
   url: @property.url,
   notes: @property.notes,

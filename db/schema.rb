@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2019_12_23_031445) do
     t.integer "user_id"
     t.boolean "visited"
     t.boolean "available"
+    t.integer "rent"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

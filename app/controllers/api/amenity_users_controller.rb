@@ -1,4 +1,9 @@
 class Api::AmenityUsersController < ApplicationController
+  def index
+    @amenity_users = current_user.amenity_users
+    render "index.json.jb"
+  end
+
   def create
     @amenity_user = AmenityUser.new(
       user_id: current_user.id,

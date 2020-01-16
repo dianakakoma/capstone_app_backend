@@ -8,6 +8,7 @@ class Api::PropertiesController < ApplicationController
 
   def create
     @property = Property.new(
+      rent: params[:rent],
       address: params[:address],
       url: params[:url],
       notes: params[:notes],

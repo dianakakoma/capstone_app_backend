@@ -1,0 +1,8 @@
+@amenity_users.map do |amenity_user|
+  {
+    id: amenity_user.id,
+    amenity_id: amenity_user.amenity_id,
+    amenity: amenity_user.amenity,
+    must_have: amenity_user.must_have,
+  }
+end
