@@ -27,11 +27,10 @@ class Api::PropertiesController < ApplicationController
   end
 
   def update
-    @property = Property.findby(id: params[:id])
+    @property = Property.find_by(id: params[:id])
     @property.rating = params[:rating] || @property.rating
     @property.notes = params[:notes] || @property.notes
-    @property.photos = params[:photos] || @property.photos
     @property.save
-    render show.json.jb
+    render "show.json.jb"
   end
 end

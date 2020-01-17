@@ -1,5 +1,6 @@
 @properties.map do |property|
   {
+    id: property.id,
     rent: property.rent,
     address: property.address,
     url: property.url,

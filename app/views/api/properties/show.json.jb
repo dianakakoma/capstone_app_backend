@@ -1,4 +1,5 @@
 {
+  id: @property.id,
   rent: @property.rent,
   address: @property.address,
   url: @property.url,
@@ -6,5 +7,6 @@
   visited: @property.visited,
   rating: @property.rating,
   available: @property.available,
+  images: @property.images,
   created_at: @property.created_at,
 }
