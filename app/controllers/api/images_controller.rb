@@ -22,15 +22,15 @@ class Api::ImagesController < ApplicationController
   def create
     response = Cloudinary::Uploader.upload(params[:image])
     cloudinary_url = response["secure_url"]
-    @post = Post.new(
-      title: params[:title],
-      body: params[:body],
-      image: cloudinary_url,
+    @image = Image.new(
+      url: cloudinary_url,
+      property_id: params[:property_id],
+      user_id: current_user.id,
     )
-    if @post.save
-      render "show.json.jbuilder"
+    if @image.save
+      render "show.json.jb"
     else
-      render json: { errors: @post.errors.full_messages }, status: 422
+      render json: { errors: @image.errors.full_messages }, status: 422
     end
   end
 end

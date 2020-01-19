@@ -1,4 +1,6 @@
 {
   id: @image.id,
   url: @image.url,
+  property_id: @image.property_id,
+  user_id: @image.user_id,
 }
