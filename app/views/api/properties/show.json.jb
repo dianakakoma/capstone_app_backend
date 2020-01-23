@@ -8,5 +8,6 @@
   rating: @property.rating,
   available: @property.available,
   images: @property.images,
-  created_at: @property.created_at,
+  created_at: @property.created_at.strftime("%A, %b %e, %Y"),
+  updated_at: @property.updated_at.strftime("%A, %b %e, %Y"),
 }
