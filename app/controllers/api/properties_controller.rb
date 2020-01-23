@@ -2,7 +2,7 @@ class Api::PropertiesController < ApplicationController
   before_action :authenticate_user #, except: [:index, :show]
 
   def index
-    @properties = current_user.properties
+    @properties = current_user.properties.order(:id => :desc)
     render "index.json.jb"
   end
 
